@@ -145,7 +145,7 @@ function StockProfitLossCalculator() {
    */
   function calculateProfit(initialPrice, quantityOfStocks, currentPrice) {
     const profit = (currentPrice - initialPrice) * quantityOfStocks;
-    const profitPercentage = (profit / initialPrice) * 100;
+    const profitPercentage = (profit / (initialPrice * quantityOfStocks)) * 100;
     return `Congratulations BULL🐂! You earned a profit of ${fixToTwoDigitsAfterDecimalPoint(
       profit
     )} and your profit percentage is ${fixToTwoDigitsAfterDecimalPoint(
@@ -162,7 +162,7 @@ function StockProfitLossCalculator() {
    */
   function calculateLoss(initialPrice, quantityOfStocks, currentPrice) {
     const loss = (initialPrice - currentPrice) * quantityOfStocks;
-    const lossPercentage = (loss / initialPrice) * 100;
+    const lossPercentage = (loss / (initialPrice * quantityOfStocks)) * 100;
     return `You had a loss of ${fixToTwoDigitsAfterDecimalPoint(
       loss
     )} and your loss percentage is ${fixToTwoDigitsAfterDecimalPoint(
