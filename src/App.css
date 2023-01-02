@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
 :root {
   --primary: #111827;
@@ -8,12 +8,12 @@
 }
 
 ::placeholder {
-  color: var(--secondary);
+  color: var(--tertiary);
   font-size: medium;
 }
 
 .App {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   margin: 0px auto;
   background-color: var(--secondary);
   color: var(--primary);
@@ -68,6 +68,7 @@
   padding: 0.5rem;
   margin: 1rem;
   cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .btn-disabled {
@@ -80,6 +81,7 @@
   padding: 0.5rem;
   margin: 1rem;
   cursor: not-allowed;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 label {
@@ -98,6 +100,7 @@ input {
   width: 100%;
   max-width: 258px;
   color: var(--primary);
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .section h2 {
@@ -183,27 +186,6 @@ h4 {
   color: var(--secondary);
 }
 
-.notes-table {
-  width: 50%;
-  text-align: center;
-  border-collapse: collapse;
-  margin: 1rem;
-}
-
-.notes-table caption {
-  margin: 1rem auto;
-  font-size: x-large;
-  font-weight: 500;
-}
-
-th,
-td {
-  border: 2px solid var(--primary);
-  width: 0%;
-  border-collapse: collapse;
-  padding: 0.4rem;
-}
-
 @media screen and (min-width: 400px) and (max-width: 1281px) {
   .App {
     font-size: x-large;
@@ -228,12 +210,6 @@ td {
   .btn-disabled {
     font-size: large;
   }
-
-  th,
-  td {
-    font-size: smaller;
-    font-weight: 600;
-  }
 }
 
 @media (max-width: 320px) {
@@ -247,11 +223,5 @@ td {
 
   input {
     width: auto;
-  }
-
-  th,
-  td {
-    font-size: smaller;
-    font-weight: 600;
   }
 }

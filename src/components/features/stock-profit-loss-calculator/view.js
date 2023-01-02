@@ -214,6 +214,7 @@ function StockProfitLossCalculator() {
           onChange={initiaIPriceInputChangeHandler}
           type={"number"}
           min={0.1}
+          placeholder="enter a value"
         ></input>
 
         <label
@@ -228,6 +229,7 @@ function StockProfitLossCalculator() {
           onChange={quantityOfStocksInputChangeHandler}
           type={"number"}
           min={1}
+          placeholder="enter a value"
         ></input>
 
         <label htmlFor="current-price-intput" className="current-price-label">
@@ -239,6 +241,7 @@ function StockProfitLossCalculator() {
           onChange={currentPriceInputChangeHandler}
           type={"number"}
           min={0.1}
+          placeholder="enter a value"
         ></input>
       </div>
     );
