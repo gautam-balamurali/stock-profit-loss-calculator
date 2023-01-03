@@ -37,7 +37,7 @@ function StockProfitLossCalculator() {
    * @param input
    * @returns boolean
    */
-  function isNumbererInputValid(input) {
+  function isNumberInputValid(input) {
     if (isNotANumber(input) || containsOnlySpaces(input)) {
       invalidInputErrorHandler();
       return false;
@@ -65,7 +65,10 @@ function StockProfitLossCalculator() {
    */
   function initiaIPriceInputChangeHandler(event) {
     let inputInitiaIPrice = event.target.value;
-    if (isNumbererInputValid(inputInitiaIPrice)) {
+    if (
+      isNumberInputValid(inputInitiaIPrice) &&
+      convertToNumber(inputInitiaIPrice) >= 0.1
+    ) {
       setOutputMessage("");
       setinitialPriceInput(inputInitiaIPrice);
     } else {
@@ -80,7 +83,10 @@ function StockProfitLossCalculator() {
    */
   function quantityOfStocksInputChangeHandler(event) {
     let inputQuantityOfStocks = event.target.value;
-    if (isNumbererInputValid(inputQuantityOfStocks)) {
+    if (
+      isNumberInputValid(inputQuantityOfStocks) &&
+      convertToNumber(inputQuantityOfStocks) >= 1
+    ) {
       setOutputMessage("");
       setQuantityOfStocksInput(inputQuantityOfStocks);
     } else {
@@ -94,10 +100,13 @@ function StockProfitLossCalculator() {
    * @param event
    */
   function currentPriceInputChangeHandler(event) {
-    let inputcurrenPrice = event.target.value;
-    if (isNumbererInputValid(inputcurrenPrice)) {
+    let inputcurrentPrice = event.target.value;
+    if (
+      isNumberInputValid(inputcurrentPrice) &&
+      convertToNumber(inputcurrentPrice) >= 0
+    ) {
       setOutputMessage("");
-      setCurrentPriceInput(inputcurrenPrice);
+      setCurrentPriceInput(inputcurrentPrice);
     } else {
       invalidInputErrorHandler();
       setCurrentPriceInput("");
@@ -240,7 +249,7 @@ function StockProfitLossCalculator() {
           value={currentPriceInput}
           onChange={currentPriceInputChangeHandler}
           type={"number"}
-          min={0.1}
+          min={0}
           placeholder="enter a value"
         ></input>
       </div>
@@ -279,7 +288,7 @@ function StockProfitLossCalculator() {
     return (
       <p
         className={`${
-          currentPriceInput >= initialPriceInput ? "output-msg" : "error-msg"
+          outputMessage.includes("Congratulations") ? "output-msg" : "error-msg"
         }`}
       >
         {outputMessage}

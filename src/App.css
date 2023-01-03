@@ -91,8 +91,9 @@ label {
 }
 
 input {
-  font-size: 14px;
-  outline: #fff;
+  font-size: larger;
+  font-weight: bold;
+  outline: var(--secondary);
   padding: 0.6rem 1rem;
   margin: 1rem;
   border: 2px solid var(--primary);
