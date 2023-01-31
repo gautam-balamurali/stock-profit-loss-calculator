@@ -8,27 +8,27 @@
 * loss = (initialPrice - currentPrice) * quantityOfStocks;
 * loss% = (loss / (initialPrice * quantityOfStocks)) * 100;
 
-# Sample input/output
+## Sample input/output
 
 ![image](https://user-images.githubusercontent.com/27736288/210008234-eadc6e8b-9f5f-49fe-83df-c1a6451c0dbe.png)
 ![image](https://user-images.githubusercontent.com/27736288/210008618-e8ccbb1c-0b70-4c9f-9802-b9212ae4a539.png)
 
 
 
-# Tech Stack
+## Tech Stack
 
 * React
 * Netlify
 
-# Preview
+## Preview
 
 [View live](https://stock-profit-loss-gautam-balamurali.netlify.app/)
 
-# License
+## License
 
 [View license](https://github.com/gautam-balamurali/stock-profit-loss-calculator/blob/master/LICENSE.md)
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
